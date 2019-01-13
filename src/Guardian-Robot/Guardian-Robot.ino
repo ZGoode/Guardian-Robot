@@ -1,6 +1,6 @@
 #include <Servo.h>
 #include <MusicWithoutDelay.h>
-#include <Tone-master.h>
+#include <Tone.h>
 
 #define SERVO_MIN           10
 #define SERVO_MAX           190
