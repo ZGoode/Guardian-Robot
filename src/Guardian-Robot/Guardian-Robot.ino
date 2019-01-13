@@ -1,6 +1,6 @@
 #include <Servo.h>
 #include <MusicWithoutDelay.h>
-#include <Tone.h>
+#include <Tone-master.h>
 
 #define SERVO_MIN           10
 #define SERVO_MAX           190
@@ -20,19 +20,19 @@ const int flickerExecution = 5;           // executes every 50 milliseconds
 
 Servo myservo;
 
-char *introSoprano = "";
-char *introAlto = "";
-char *introTenor = "";
-char *introBass = "";
+char *introSoprano = ":d=12,o=5,b=160,f=aeb:2b,p,p,b,b,b,b,8.b,16a,4b,p,p,b,b,b,b,8.b,16a,4b,p,p,b,b,b,b,8b,16f,16f,8f,16f,16f,8f,16f,16f,8f,8f";
+char *introAlto = ":d=12,o=5,b=160,f=aeb:2b,p,p,b,b,b,b,8.b,16a,4b,p,p,b,b,b,b,8.b,16a,4b,p,p,b,b,b,b,8b,16f,16f,8f,16f,16f,8f,16f,16f,8f,8f";
+//char *introTenor = ":d=12,o=5,b=160,f=aeb:2b,p,p,b,b,b,b,8.b,16a,4b,p,p,b,b,b,b,8.b,16a,4b,p,p,b,b,b,b,8b,16f,16f,8f,16f,16f,8f,16f,16f,8f,8f";
+//char *introBass = ":d=12,o=5,b=160,f=aeb:2b,p,p,b,b,b,b,8.b,16a,4b,p,p,b,b,b,b,8.b,16a,4b,p,p,b,b,b,b,8b,16f,16f,8f,16f,16f,8f,16f,16f,8f,8f";
 
 Tone myTone1;
 Tone myTone2;
-Tone myTone3;
-Tone myTone4;
+//Tone myTone3;
+//Tone myTone4;
 MusicWithoutDelay voice1(introSoprano);
 MusicWithoutDelay voice2(introAlto);
-MusicWithoutDelay voice3(introTenor);
-MusicWithoutDelay voice4(introBass);
+//MusicWithoutDelay voice3(introTenor);
+//MusicWithoutDelay voice4(introBass);
 
 int randomHeadTurn;
 int servoPosition;
@@ -134,8 +134,8 @@ void setup() {
 
   myTone1.begin(SPEAKER_PIN1);
   myTone2.begin(SPEAKER_PIN2);
-  myTone3.begin(SPEAKER_PIN3);
-  myTone4.begin(SPEAKER_PIN4);
+//  myTone3.begin(SPEAKER_PIN3);
+//  myTone4.begin(SPEAKER_PIN4);
 
   digitalWrite(LED_PIN, HIGH);
   digitalWrite(GLOW_PIN, HIGH);
